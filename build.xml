@@ -1,0 +1,10 @@
+<?xml version="1.8" encoding="UTF-8"?>
+
+<project name="FRC Deployment" default="deploy">
+
+    <property file="build.properties"/>
+    <property file="C:/Users/Public/wpilib/wpilib.properties"/>
+    <property file="C:/Users/Public/wpilib/java/current/ant/build.properties"/>
+
+    <import file="C:/Users/Public/wpilib/java/current/ant/build.xml"/>
+</project>
