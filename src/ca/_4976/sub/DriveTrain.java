@@ -15,10 +15,7 @@ public class DriveTrain extends IterativeRobot {
     int state = 0;
     int head1 = 0;
     int head2 = 0;
-    int gear = 0;
-    Joystick joystick = new Joystick(0);
     AHRS navX = new AHRS(SerialPort.Port.kMXP);
-    RobotDrive move = new RobotDrive(0, 1, 2, 3);
 
 
     public void teleopPeriodic() {
@@ -107,6 +104,7 @@ public class DriveTrain extends IterativeRobot {
 
 
     }
+
     //
 // Aavin@4976-Server MINGW64 ~/IdeaProjects/New bot drive train
 $ git init
