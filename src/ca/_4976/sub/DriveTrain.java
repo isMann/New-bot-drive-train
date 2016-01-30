@@ -45,7 +45,7 @@ public class DriveTrain extends IterativeRobot {
             head1 = (int) navX.getYaw();
             if (head1 < 180 && head1 > 90) {
                 head2 = head1 - 270;
-
+                state =2;
             } else {
                 head2 = head1 + 90;
                 state = 2;
@@ -73,7 +73,7 @@ public class DriveTrain extends IterativeRobot {
 //&& = and      || = or
                 } else {
                     head2 = head1 - 90;
-                    state = 2;
+                    state = 4;
 
                 }
                 if (state == 4) {
@@ -104,6 +104,7 @@ public class DriveTrain extends IterativeRobot {
 
 
     }
+
 
     //
 // Aavin@4976-Server MINGW64 ~/IdeaProjects/New bot drive train
