@@ -21,13 +21,11 @@ public class Output {
     }
 
     public enum Motor {
-        DRIVE_LEFT_1(0, 1.0, new CANTalon(11)),
-        DRIVE_LEFT_2(1, 1.0, new CANTalon(12)),
-        DRIVE_RIGHT_1(2, 1.0, new CANTalon(13)),
-        DRIVE_RIGHT_2(3, 1.0, new CANTalon(14)),
-        ELEVATOR(11, 0.75, new Talon(0)),
-        GRIPPER_LEFT(12, 1, new Talon(1)),
-        GRIPPER_RIGHT(13, 1,new Talon(2));
+        DRIVE_LEFT_1(11, 1.0, new Talon(0)),
+        DRIVE_LEFT_2(12, 1.0, new CANTalon(12)),
+        DRIVE_RIGHT_1(13, 1.0, new Talon(2)),
+        DRIVE_RIGHT_2(14, 1.0, new CANTalon(14));
+
         public int id;
         public Object motor;
 
@@ -72,9 +70,8 @@ public class Output {
     }
 
     public enum PneumaticSolenoid {
-        Gear_Shift(0, 4),
-        CLAW_OPEN(2,3),
-        CLAW_UP(4,5);
+        Gear_Shift(0, 4);
+
 
         public int port1, port2;
         public DoubleSolenoid solenoid;

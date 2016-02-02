@@ -1,8 +1,7 @@
-package ca.team4976.io;
+package ca._4976.io;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.Gyro;
 
 public class Input {
 
@@ -50,30 +49,5 @@ public class Input {
 
     }
 
-    public enum AnalogGyro {
-
-        DRIVE(0);
-
-        private Gyro gyro;
-        private boolean initalized = false;
-
-        AnalogGyro(int analogIn) {
-            gyro = new Gyro(analogIn);
-        }
-
-        public double getAngle() {
-            return gyro.getAngle();
-        }
-
-        public void gyroInit() { gyro.initGyro(); initalized = true; }
-
-        public boolean isInitalized() { return initalized; }
-
-        public void reset() {
-            gyro.reset();
-        }
-
-        public double getRate() { return gyro.getRate(); }
-    }
-}
+   }
 
