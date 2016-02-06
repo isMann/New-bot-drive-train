@@ -3,11 +3,14 @@ package ca._4976.io;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
 
+
 public class Input {
 
     public enum Digital {
         ELEVATOR_GROUND(3),
-        ELEVATOR_TOP(4);
+        IR_L(1),
+        ELEVATOR_TOP(4),
+        IR_R(2);
 
         private DigitalInput di;
 
@@ -41,7 +44,7 @@ public class Input {
             encoder.reset();
             distance = value;
         }
-        
+
         public void reset() {
             encoder.reset();
             distance = 0;
@@ -49,5 +52,27 @@ public class Input {
 
     }
 
-   }
+    public enum AnalogGyro {
+
+        DRIVE(0);
+
+
+        private boolean initalized = false;
+
+        AnalogGyro(int analogIn) {
+
+        }
+
+
+
+
+        public boolean isInitalized() {
+            return initalized;
+        }
+
+        public void reset() {
+        }
+
+    }
+}
 
