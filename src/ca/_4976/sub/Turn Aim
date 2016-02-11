@@ -21,8 +21,11 @@ public class Aim extends IterativeRobot {
         Controller.Primary.Button.A.isDownOnce();
 
         if (state == 0) {
-            if (Controller.Primary.Button.A.isDownOnce() == true) {
+            if (Controller.Primary.Button.X.isDownOnce() == true) {
                 state = 1;
+            }
+            if (Controller.Primary.Button.B.isDownOnce() == true) {
+                state = 2;
             }
         }
         if (state == 1) {
@@ -40,8 +43,22 @@ public class Aim extends IterativeRobot {
             }
 
         }
+        if (state == 2) {
+            if (Input.Digital.IR_L.get() && Input.Digital.IR_R.get()) {
+                Output.Motor.DRIVE_LEFT_1.set(0);
+                Output.Motor.DRIVE_LEFT_2.set(0);
+                Output.Motor.DRIVE_RIGHT_1.set(0);
+                Output.Motor.DRIVE_RIGHT_2.set(0);
+                state = 0;
+            } else {
+                Output.Motor.DRIVE_LEFT_1.set(0.4);
+                Output.Motor.DRIVE_LEFT_2.set(0.4);
+                Output.Motor.DRIVE_RIGHT_1.set(0.4);
+                Output.Motor.DRIVE_RIGHT_2.set(0.4);
+            }
+
+        }
         System.out.println(Input.Digital.IR_L + "Left");
         System.out.println(Input.Digital.IR_R + "Right");
-        System.out.println("Robots don't quit!");
     }
 }
