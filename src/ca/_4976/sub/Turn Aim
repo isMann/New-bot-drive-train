@@ -21,10 +21,10 @@ public class Aim extends IterativeRobot {
         Controller.Primary.Button.A.isDownOnce();
 
         if (state == 0) {
-            if (Controller.Primary.Button.X.isDownOnce() == true) {
+            if (Controller.Primary.DPad.WEST.isDownOnce() == true) {
                 state = 1;
             }
-            if (Controller.Primary.Button.B.isDownOnce() == true) {
+            if (Controller.Primary.DPad.EAST.isDownOnce() == true) {
                 state = 2;
             }
         }
